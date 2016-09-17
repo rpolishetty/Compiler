@@ -1,0 +1,11 @@
+digraph graphviz {
+  node [shape = none];
+  edge [tailport = s];
+  entry
+  subgraph cluster {
+  color="/x11/white"
+  n0 [label=<<table border="0"><tr><td border="1" colspan="3">B1</td></tr><tr><td align="left">loadI</td><td align="left">0</td><td align="left">=&gt; r_X</td></tr><tr><td align="left">readInt</td><td align="left"></td><td align="left">=&gt; r_X</td></tr><tr><td align="left">loadI</td><td align="left">2</td><td align="left">=&gt; r0</td></tr><tr><td align="left">mult</td><td align="left">r0, r_X</td><td align="left">=&gt; r1</td></tr><tr><td align="left">writeInt</td><td align="left">r1</td><td align="left"></td></tr><tr><td align="left">exit</td><td align="left"></td><td align="left"></td></tr></table>>,fillcolor="/x11/white",shape=box]
+  }
+  entry -> n0
+  n0 -> exit
+}

@@ -1,0 +1,69 @@
+digraph AST {
+  ordering=out;
+  node [shape = box, style = filled];
+
+n0 [label="program",fillcolor="/x11/lightgrey",shape=box]
+n1 [label="Dec List",fillcolor="/x11/white",shape=none]
+n0 -> n1;
+n2 [label="N",fillcolor="/x11/lightgrey",shape=box]
+n1 -> n2;
+n3 [label="int",fillcolor="/x11/lightgrey",shape=box]
+n2 -> n3;
+n4 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n1 -> n4;
+n5 [label="int",fillcolor="/x11/lightgrey",shape=box]
+n4 -> n5;
+n8 [label="N",fillcolor="/x11/lightgrey",shape=box]
+n7 -> n8;
+n9 [label="readint",fillcolor="/x11/lightgrey",shape=box]
+n7 -> n9;
+n7 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+n6 -> n7;
+n13 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n12 -> n13;
+n14 [label="0",fillcolor="/x11/lightgrey",shape=box]
+n12 -> n14;
+n12 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+n6 -> n12;
+n24 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n21 -> n24;
+n26 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n21 -> n26;
+n21 [label="*",fillcolor="/x11/lightgrey",shape=box]
+n20 -> n21;
+n29 [label="N",fillcolor="/x11/lightgrey",shape=box]
+n20 -> n29;
+n20 [label="<=",fillcolor="/pastel13/3",shape=box]
+n19 -> n20;
+n19 [label="while",fillcolor="/x11/white",shape=none]
+n6 -> n19;
+n36 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n35 -> n36;
+n39 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n37 -> n39;
+n42 [label="1",fillcolor="/x11/lightgrey",shape=box]
+n37 -> n42;
+n37 [label="+",fillcolor="/x11/lightgrey",shape=box]
+n35 -> n37;
+n35 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+n34 -> n35;
+n34 [label="statment",fillcolor="/x11/white",shape=none]
+n19 -> n34;
+n49 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n48 -> n49;
+n52 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n50 -> n52;
+n55 [label="1",fillcolor="/x11/lightgrey",shape=box]
+n50 -> n55;
+n50 [label="-",fillcolor="/x11/lightgrey",shape=box]
+n48 -> n50;
+n48 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+n6 -> n48;
+n61 [label="SQRT",fillcolor="/x11/lightgrey",shape=box]
+n60 -> n61;
+n60 [label="writeint",fillcolor="/x11/lightgrey",shape=box]
+n6 -> n60;
+n6 [label="Statement list",fillcolor="/x11/white",shape=none]
+n0 -> n6;
+
+}

@@ -1,0 +1,18 @@
+digraph graphviz {
+  node [shape = none];
+  edge [tailport = s];
+  entry
+  subgraph cluster {
+  color="/x11/white"
+  n0 [label=<<table border="0"><tr><td border="1" colspan="3">B1</td></tr><tr><td align="left">loadI</td><td align="left">0</td><td align="left">=&gt; r_N</td></tr><tr><td align="left">loadI</td><td align="left">0</td><td align="left">=&gt; r_SQRT</td></tr><tr><td align="left">readInt</td><td align="left"></td><td align="left">=&gt; r_N</td></tr><tr><td align="left">loadI</td><td align="left">0</td><td align="left">=&gt; r0</td></tr><tr><td align="left">i2i</td><td align="left">r0</td><td align="left">=&gt; r_SQRT</td></tr><tr><td align="left">jumpI</td><td align="left"></td><td align="left">-&gt; B2</td></tr></table>>,fillcolor="/x11/white",shape=box]
+  n0 -> n1
+  n1 [label=<<table border="0"><tr><td border="1" colspan="3">B2</td></tr><tr><td align="left">mult</td><td align="left">r_SQRT, r_SQRT</td><td align="left">=&gt; r1</td></tr><tr><td align="left">cmp_LE</td><td align="left">r1, r_N</td><td align="left">=&gt; r2</td></tr><tr><td align="left">cbr</td><td align="left">r2</td><td align="left">-&gt; B3, B4</td></tr></table>>,fillcolor="/x11/white",shape=box]
+  n1 -> n2
+  n1 -> n3
+  n2 [label=<<table border="0"><tr><td border="1" colspan="3">B3</td></tr><tr><td align="left">loadI</td><td align="left">1</td><td align="left">=&gt; r3</td></tr><tr><td align="left">add</td><td align="left">r_SQRT, r3</td><td align="left">=&gt; r4</td></tr><tr><td align="left">i2i</td><td align="left">r4</td><td align="left">=&gt; r_SQRT</td></tr><tr><td align="left">jumpI</td><td align="left"></td><td align="left">-&gt; B2</td></tr></table>>,fillcolor="/x11/white",shape=box]
+  n2 -> n1
+  n3 [label=<<table border="0"><tr><td border="1" colspan="3">B4</td></tr><tr><td align="left">loadI</td><td align="left">1</td><td align="left">=&gt; r5</td></tr><tr><td align="left">sub</td><td align="left">r_SQRT, r5</td><td align="left">=&gt; r6</td></tr><tr><td align="left">i2i</td><td align="left">r6</td><td align="left">=&gt; r_SQRT</td></tr><tr><td align="left">writeInt</td><td align="left">r_SQRT</td><td align="left"></td></tr><tr><td align="left">exit</td><td align="left"></td><td align="left"></td></tr></table>>,fillcolor="/x11/white",shape=box]
+  }
+  entry -> n0
+  n3 -> exit
+}

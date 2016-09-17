@@ -1,0 +1,65 @@
+digraph tl12Ast {
+  ordering=out;
+  node [shape = box, style = filled];
+  n1 [label="program",fillcolor="/x11/lightgrey",shape=box]
+  n2 [label="decl list",fillcolor="/x11/white",shape=none]
+  n1 -> n2
+  n3 [label="decl: 'N'",fillcolor="/pastel13/3",shape=box]
+  n2 -> n3
+  n4 [label="int",fillcolor="/x11/lightgrey",shape=box]
+  n3 -> n4
+  n5 [label="decl: 'SQRT'",fillcolor="/pastel13/3",shape=box]
+  n2 -> n5
+  n6 [label="int",fillcolor="/x11/lightgrey",shape=box]
+  n5 -> n6
+  n7 [label="stmt list",fillcolor="/x11/white",shape=none]
+  n1 -> n7
+  n8 [label=":= readInt",fillcolor="/x11/lightgrey",shape=box]
+  n7 -> n8
+  n9 [label="N",fillcolor="/pastel13/3",shape=box]
+  n8 -> n9
+  n10 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+  n7 -> n10
+  n11 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n10 -> n11
+  n12 [label="0",fillcolor="/pastel13/3",shape=box]
+  n10 -> n12
+  n13 [label="while",fillcolor="/x11/lightgrey",shape=box]
+  n7 -> n13
+  n14 [label="<=",fillcolor="/pastel13/2",shape=box]
+  n13 -> n14
+  n15 [label="*",fillcolor="/pastel13/3",shape=box]
+  n14 -> n15
+  n16 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n15 -> n16
+  n17 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n15 -> n17
+  n18 [label="N",fillcolor="/pastel13/3",shape=box]
+  n14 -> n18
+  n19 [label="stmt list",fillcolor="/x11/white",shape=none]
+  n13 -> n19
+  n20 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+  n19 -> n20
+  n21 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n20 -> n21
+  n22 [label="+",fillcolor="/pastel13/3",shape=box]
+  n20 -> n22
+  n23 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n22 -> n23
+  n24 [label="1",fillcolor="/pastel13/3",shape=box]
+  n22 -> n24
+  n25 [label=":=",fillcolor="/x11/lightgrey",shape=box]
+  n7 -> n25
+  n26 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n25 -> n26
+  n27 [label="-",fillcolor="/pastel13/3",shape=box]
+  n25 -> n27
+  n28 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n27 -> n28
+  n29 [label="1",fillcolor="/pastel13/3",shape=box]
+  n27 -> n29
+  n30 [label="writeInt",fillcolor="/x11/lightgrey",shape=box]
+  n7 -> n30
+  n31 [label="SQRT",fillcolor="/pastel13/3",shape=box]
+  n30 -> n31
+}
